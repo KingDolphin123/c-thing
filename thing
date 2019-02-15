@@ -1,89 +1,31 @@
-using System;                         // Made by Jacob Lee, Programming Assignment 1, 9/28/18
-using static System.Console;
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.cities {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+} 
+</style>
+</head>
+<body>
 
-namespace ConsoleApplication1
-{
-    public class ConsoleApplication1
-    {
-        static void Main()
-        {
-            string name;
-            int CurrentAge;
-            double meter, inches;
-            WriteLine("Hi? What is your name?");
-            name = ReadLine();
-            WriteLine("Welcome to my app {0}!", name);
-            WriteLine("How old are you?");
-            CurrentAge = int.Parse(ReadLine());   // Converts the user input to an integer.
-            WriteLine("You are {0} this year and will be {1} next year?" ,CurrentAge, ++CurrentAge);
-            WriteLine("How tall are you?");
-            WriteLine("In inches -");
-            inches = int.Parse(ReadLine()); // Converts the user input to an integer.
-            meter = inches/39.3701; // Formula for meters to inches
-            WriteLine("You are {0} meters tall!", meter);
-            WriteLine("Rock, paper, or scissors?");
-            string userChoice = ReadLine();
-            Random r = new Random();  // Makes the computer chose a random number.
-            int computerChoice = r.Next(3);  // Limits the numbers that the computer can choose to 0, 1, or 2.
+<div class="cities">
+  <h2>London</h2>
+  <p>London is the capital of England.</p>
+</div>
 
-            if (computerChoice == 1)
-            {
-                if (userChoice == "rock")
-                {
-                    WriteLine("The computer chose rock, it's a tie");
-                }
-                else if (userChoice == "paper")
-                {
-                    WriteLine("The computer chose paper, it's a tie");
-                }
-                else if (userChoice == "scissors")
-                {
-                    WriteLine("The computer chose scissors, it's a tie");
-                }
-                else
-                {
-                    WriteLine("Pick rock, paper, or scissors");
-                }
-            }
-            else if (computerChoice == 2)
-            {
-                if (userChoice == "rock")
-                {
-                    WriteLine("The computer chose paper, you lose");
-                }
-                else if (userChoice == "paper")
-                {
-                    WriteLine("The computer chose scissors, you lose");
-                }
-                else if (userChoice == "scissors")
-                {
-                    WriteLine("The computer chose rock, you lose");
-                }
-                else
-                {
-                    WriteLine("Pick rock, paper, or scissors");
-                }
-            }
-            else if (computerChoice == 0)
-            {
-                if (userChoice == "rock")
-                {
-                    WriteLine("The computer chose scissors, you win");
-                }
-                else if (userChoice == "paper")
-                {
-                    WriteLine("The computer chose rock, you win");
-                }
-                else if (userChoice == "scissors")
-                {
-                    WriteLine("The computer chose paper, you win");
-                }
-                else
-                {
-                    WriteLine("Pick rock, paper, or scissors");
-                }
-            }
-            ReadKey();
-        }
-    }
-}
+<div class="cities">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div class="cities">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+</body>
+</html>
